@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System.Linq;
 #if VRC_SDK_VRCSDK2
 using VRC_AvatarDescriptor = VRCSDK2.VRC_AvatarDescriptor;
 #elif VRC_SDK_VRCSDK3
@@ -64,9 +65,12 @@ namespace arkmisha.VRCSizeAvatarGenerator
                 {
                     sizeList.Add(1.0f);
                 }
-                if (GUILayout.Button("-"))
+                using (new EditorGUI.DisabledGroupScope(!sizeList.Any()))
                 {
-                    sizeList.RemoveAt(sizeList.Count - 1);
+                    if (GUILayout.Button("-"))
+                    {
+                        sizeList.Remove(sizeList.Last());
+                    }
                 }
             }
 
