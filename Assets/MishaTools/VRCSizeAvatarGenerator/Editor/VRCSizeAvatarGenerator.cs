@@ -10,7 +10,7 @@ using VRC_AvatarDescriptor = VRC.SDK3.Avatars.Components.VRCAvatarDescriptor;
 #endif
 using VRC.Core;
 
-namespace arkmisha.VRCSizeAvatarGenerator
+namespace tuki9ko.VRCSizeAvatarGenerator
 {
     public class VRCSizeAvatarGenerator : EditorWindow
     {
