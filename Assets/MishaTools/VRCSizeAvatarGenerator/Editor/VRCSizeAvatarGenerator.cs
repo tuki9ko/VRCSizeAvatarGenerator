@@ -42,16 +42,6 @@ namespace arkmisha.VRCSizeAvatarGenerator
                     this.avatar,
                     typeof(GameObject),
                     true) as GameObject;
-
-                if(scope.changed && avatar != null)
-                {
-                    
-                }
-            }
-
-            if(avatar == null || (avatar != null && HasAvatarDescriptor(avatar)))
-            {
-                // TODO:エラー処理
             }
 
             EditorGUILayout.Space();
