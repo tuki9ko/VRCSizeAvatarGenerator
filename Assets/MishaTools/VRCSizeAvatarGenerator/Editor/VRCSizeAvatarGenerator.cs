@@ -25,7 +25,10 @@ namespace arkmisha.VRCSizeAvatarGenerator
 
         private void OnEnable()
         {
-            sizeList = new List<float>();
+            sizeList = new List<float>
+            {
+                1.0f,
+            };
         }
 
         private void OnGUI()
