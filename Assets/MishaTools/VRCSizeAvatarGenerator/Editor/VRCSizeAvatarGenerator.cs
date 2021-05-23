@@ -93,8 +93,8 @@ namespace arkmisha.VRCSizeAvatarGenerator
                             var descriptor = target.GetComponent<VRC_AvatarDescriptor>();
                             var pipeline = target.GetComponent<PipelineManager>();
                             target.name = originalName + " x" + size;
-                            target.transform.localScale.Set(size, size, size);
-                            descriptor.ViewPosition.Set(
+                            target.transform.localScale = new Vector3(size, size, size);
+                            descriptor.ViewPosition = new Vector3(
                                 originalViewPosition.x * size,
                                 originalViewPosition.y * size,
                                 originalViewPosition.z * size);
